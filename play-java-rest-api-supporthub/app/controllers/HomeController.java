@@ -30,8 +30,7 @@ public class HomeController extends Controller {
             response.put("content", String.format("Welcome to Support Hub"));
         } else {
             String val = java.net.URLDecoder.decode(query, "UTF-8");
-            //String[] inargs=new String[]{"list","--projectId","civic-brand-207014"};
-            String[] inargs=new String[]{"--projectId","ces-pilot","--sessionId","ces session id"+n,"--languageCode","en-US",val};
+            String[] inargs=new String[]{"--projectId","support-pilot","--sessionId","ces session id"+n,"--languageCode","en-US",val};
             //--projectId civic-brand-207014 --sessionId "fake session id" --languageCode en-US "looking for a gift"
             System.out.println("input text: "+val);
             String answer=it.getIntent(inargs);
