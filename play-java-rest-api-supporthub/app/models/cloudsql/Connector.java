@@ -46,7 +46,7 @@ public class Connector
         // TODO: fill this in
         // This is the password that was set via the Cloud Console or empty if never set
         // (not recommended).
-        String password = "1122";
+        String password = "****";
 
         if (instanceConnectionName.equals("<insert_connection_name>")) {
             System.err.println("Please update the sample to specify the instance connection name.");
@@ -71,7 +71,6 @@ public class Connector
         String res = null;
         try (Statement statement = connection.createStatement()) {
             System.out.println("inside singleton before querying"+args);
-            String que="select ingredients from contents2 where product like '%NESFRUTA RASPBERRY 52ML%'";
             String enteredByUser = args;
             String forSql = "%" + enteredByUser + "%";
             forSql = forSql.replace("\"", "");
